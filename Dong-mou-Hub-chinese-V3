@@ -2,7 +2,7 @@ local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/rel
 
 
 local Window = WindUI:CreateWindow({
-        Title = "<font color='#FF66CC'>打开/点开DMV2脚本</font>  ",
+        Title = "<font color='#FF66CC'>打开/点开DMv2脚本</font>  ",
         
 -- ↓ This all is Optional. You can remove it.
         
@@ -30,7 +30,7 @@ Window:Tag({
 })
 
 Window:Tag({
-    Title = "v2",
+    Title = "v3",
     Color = Color3.fromHex("#30ff6a")
 })
 
@@ -45,27 +45,27 @@ Window:Tag({
 
 
 WindUI:Notify({
-    Title = "DMV2脚本通知",
-    Content = "DMV2脚本禁止倒卖",
+    Title = "DMv3脚本通知",
+    Content = "DMv3脚本禁止倒卖",
     Duration = 10, -- 10 seconds
     Icon = "bird",
 })
 
 WindUI:Notify({
-    Title = "DMV2脚本通知",
+    Title = "DMv3脚本通知",
     Content = "作者:shenmi",
     Duration = 10, -- 10 seconds
     Icon = "bird",
 })
 
 local Tab = Window:Tab({
-    Title = "DMV2脚本公告",
+    Title = "DMv3脚本公告",
     Icon = "layout-grid",
     Locked = false,
 })
 
 local Paragraph = Tab:Paragraph({
-    Title = "作者shenmi",
+    Title = "作者冬某",
     Desc = "QQ群主群107198294 ",
     Image = "rbxassetid://75198135626218",
     ImageSize = 42,
@@ -92,7 +92,7 @@ local Paragraph = Tab:Paragraph({
 })
 
 local Paragraph = Tab:Paragraph({
-    Title = "新年快乐，在这shenmi祝你身体健康，万事如意",
+    Title = "新年快乐，在这冬某祝你身体健康，万事如意",
     Desc = "",
     Image = "rbxassetid://75198135626218",
     ImageSize = 42,
