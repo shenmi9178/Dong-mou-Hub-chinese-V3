@@ -177,7 +177,7 @@ Taba:Paragraph({
 })
 
 Button(Tab1, "复制QQ群[获取最新消息]", function()
-    setclipboard("984820669")
+    setclipboard("472901387")
 end)
 
 Tab1:Paragraph({
