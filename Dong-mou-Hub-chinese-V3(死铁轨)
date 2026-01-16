@@ -92,19 +92,19 @@ local displayName = LocalPlayer.DisplayName
 
 WindUI:Notify({
     Title = "DM脚本通知",
-    Content = "DM脚本v2加载完成",
+    Content = "DM脚本v3加载完成",
     Duration = 2
 })
 
 WindUI:Notify({
     Title = "DM脚本通知",
-    Content = "V2是新做的，后面会增加服务器功能和自制功能",
+    Content = "V3是新做的，后面会增加服务器功能和自制功能",
     Duration = 2
 })
 
 -- 创建主窗口
 local XiaoDi = WindUI:CreateWindow({
-    Title = "DM v2死铁轨",
+    Title = "DM v3死铁轨",
     Icon = "rbxassetid:/",
     Author = "主作者：屑冬某",
     Folder = "迪脚本",
@@ -150,7 +150,7 @@ XiaoDi:CreateTopbarButton("theme-switcher", "moon", function()
 end, 990)
 
 XiaoDi:EditOpenButton({
-    Title = "打开DM脚本v2",
+    Title = "打开DM脚本v3",
     Icon = "rbxassetid://",
 })
 
