@@ -1668,8 +1668,8 @@ end)
 --=======姥爷司空别翻过头了===========
 --=======姥爷司空别翻过头了===========
 --=======姥爷司空别翻过头了===========
-Button(Tabjb, "点击此处复制司空私人qq以提供你的脚本", function()
-    setclipboard("766219127")
+Button(Tabjb, "点击此处复制冬某私人qq以提供你的脚本", function()
+    setclipboard("3381690468")
 end)
 
 Button(Tabjb, "殺脚本", function() 
@@ -2022,7 +2022,7 @@ Button(Tabb, "重进服务器", function()
 end)
 
 Tabd:Paragraph({
-    Title = "臭司空不更新怎么办？",
+    Title = "臭冬某不更新怎么办？",
     Desc = [[直接加qq😋]],
     Image = "eye",
     ImageSize = 24,
@@ -2034,8 +2034,8 @@ Tabd:Paragraph({
     Padding = UDim.new(0, 1)
 })
 
-Button(Tabd, "司空私人qq号码[点我复制]", function()
-    setclipboard("766219127")
+Button(Tabd, "冬某私人qq号码[点我复制]", function()
+    setclipboard("3381690468")
 end)
 
 Button(Tabb, "离开服务器", function() 
