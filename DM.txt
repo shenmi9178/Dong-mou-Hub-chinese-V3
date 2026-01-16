@@ -459,12 +459,14 @@ Tab1:Paragraph({
     Padding = UDim.new(0, 1)
 })
 
-Button(Tab1, "XION飞行", function() 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/smalldesikon/fdydyf/main/XION%20fly"))()
+Button(Tab1, "DM飞行", function() 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shenmi9178/Dong-s-script/refs/heads/main/%E5%86%AC%E6%9F%90%E9%A3%9E%E8%A1%8C.lua"))()
 end) 
 
-Button(Tab1, "XION飞车", function() 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/smalldesikon/fdydyf/main/XION%E9%A3%9E%E8%BD%A6"))()
+Button(Tab1, "XION飞车因为没有源码所以直接用xion飞车", function() 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/smalldesikon/fdydyf/main/XION%E9%A3%9E%E8%BD%A6"))()
 end)
 
 Button(Tab1, "飞行v4", function() 
