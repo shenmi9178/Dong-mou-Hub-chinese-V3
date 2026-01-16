@@ -1,0 +1,126 @@
+-- DM脚本工作室 | Dark Winter | 冬某 专属 WindUI 模块
+-- 科技感飘动UI效果，适配Roblox客户端
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+
+-- UI核心类
+local WindUI = {}
+WindUI.__index = WindUI
+
+-- 飘动动画配置
+local WIND_TWEEN_INFO = TweenInfo.new(
+    3, -- 周期
+    Enum.EasingStyle.Sine,
+    Enum.EasingDirection.InOut,
+    -1, -- 循环
+    true -- 反向
+)
+
+-- 创建UI容器
+function WindUI.new(parent: Instance, titleText: string)
+    local self = setmetatable({}, WindUI)
+    
+    -- 主框架
+    self.MainFrame = Instance.new("Frame")
+    self.MainFrame.Name = "DM_WindUIFrame"
+    self.MainFrame.Size = UDim2.new(0, 400, 0, 250)
+    self.MainFrame.Position = UDim2.new(0.5, -200, 0.3, 0)
+    self.MainFrame.BackgroundColor3 = Color3.fromRGB(15, 20, 35)
+    self.MainFrame.BackgroundTransparency = 0.2
+    self.MainFrame.BorderSizePixel = 0
+    self.MainFrame.ClipsDescendants = true
+    self.MainFrame.Parent = parent
+
+    -- 科技感渐变遮罩
+    local Gradient = Instance.new("UIGradient")
+    Gradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 120, 255)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(100, 0, 255)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 120, 255))
+    })
+    Gradient.Rotation = 45
+    Gradient.Parent = self.MainFrame
+
+    -- 专属标题（带飘动效果）
+    self.Title = Instance.new("TextLabel")
+    self.Title.Name = "DM_WindTitle"
+    self.Title.Size = UDim2.new(1, 0, 0, 50)
+    self.Title.Position = UDim2.new(0, 0, 0, 10)
+    self.Title.BackgroundTransparency = 1
+    self.Title.Text = titleText .. " | DM Studio | Dark Winter"
+    self.Title.Font = Enum.Font.GothamBold
+    self.Title.TextSize = 22
+    self.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    self.Title.Parent = self.MainFrame
+
+    -- 标题飘动动画
+    TweenService:Create(self.Title, WIND_TWEEN_INFO, {
+        Position = UDim2.new(0, 10, 0, 10)
+    }):Play()
+
+    -- 功能按钮
+    self.Button = Instance.new("TextButton")
+    self.Button.Name = "DM_WindButton"
+    self.Button.Size = UDim2.new(0, 150, 0, 40)
+    self.Button.Position = UDim2.new(0.5, -75, 0, 120)
+    self.Button.BackgroundColor3 = Color3.fromRGB(0, 80, 200)
+    self.Button.BorderSizePixel = 0
+    self.Button.Text = "冬某专属按钮"
+    self.Button.Font = Enum.Font.Gotham
+    self.Button.TextSize = 18
+    self.Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    self.Button.Parent = self.MainFrame
+
+    -- 按钮悬浮动效
+    self.Button.MouseEnter:Connect(function()
+        TweenService:Create(self.Button, TweenInfo.new(0.3), {
+            BackgroundColor3 = Color3.fromRGB(0, 120, 255),
+            Size = UDim2.new(0, 160, 0, 45)
+        }):Play()
+    end)
+
+    self.Button.MouseLeave:Connect(function()
+        TweenService:Create(self.Button, TweenInfo.new(0.3), {
+            BackgroundColor3 = Color3.fromRGB(0, 80, 200),
+            Size = UDim2.new(0, 150, 0, 40)
+        }):Play()
+    end)
+
+    -- 版权标识
+    self.Copyright = Instance.new("TextLabel")
+    self.Copyright.Name = "DM_Copyright"
+    self.Copyright.Size = UDim2.new(1, 0, 0, 20)
+    self.Copyright.Position = UDim2.new(0, 0, 1, -25)
+    self.Copyright.BackgroundTransparency = 1
+    self.Copyright.Text = "© 2026 DM脚本工作室 | 冬某 All Rights Reserved"
+    self.Copyright.Font = Enum.Font.SourceSans
+    self.Copyright.TextSize = 12
+    self.Copyright.TextColor3 = Color3.fromRGB(150, 150, 150)
+    self.Copyright.Parent = self.MainFrame
+
+    return self
+end
+
+-- 显示/隐藏UI
+function WindUI:Toggle()
+    self.MainFrame.Visible = not self.MainFrame.Visible
+end
+
+-- 示例：在ScreenGui中创建WindUI
+local function InitWindUI()
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Name = "DM_WindUIScreenGui"
+    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    local ui = WindUI.new(ScreenGui, "Dark Winter 科技界面")
+    -- 按钮点击事件示例
+    ui.Button.MouseButton1Click:Connect(function()
+        print("DM脚本工作室 | 冬某 专属按钮被点击！")
+        ui:Toggle()
+    end)
+end
+
+-- 运行UI
+InitWindUI()
+
+return WindUI
