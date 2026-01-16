@@ -3,8 +3,8 @@ if _G.DM_Script_Loaded then
     return
 end
 
-_G.XION_Script_Loaded = true
-_G.XION_Execution_Count = 1
+_G.DM_Script_Loaded = true
+_G.DM_Execution_Count = 1
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 local Window = WindUI:CreateWindow({
