@@ -167,7 +167,7 @@ Taba:Paragraph({
     Padding = UDim.new(0, 1)
 })
 Taba:Paragraph({
-    Title = "计划缝合50个服务器😋😋",
+    Title = "半自制",
     Desc = [[ ]],
     Image = "eye",
     ImageSize = 24,
