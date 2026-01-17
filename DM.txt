@@ -90,6 +90,8 @@ local Tab14 = Tab("doors")
 local Tab15 = Tab("死铁轨")
 local Tab16 = Tab("EVADE")
 local Tab17 = Tab("锻造厂")
+local Tab18 = Tab("通缉")
+local Tab19 = Tab("被遗弃")
 local Tabd = Tab("催更地点")
 local Tabb = Tab("设置")
 
@@ -1996,9 +1998,18 @@ Button(Tab17, "老外", function()
 end)
 
 Button(Tab17, "op级老外", function() 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AbdouGG/NurkHub2/refs/heads/main/Games/The%20Forge/main"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AbdouGG/NurkHub2/refs/heads/main/Games/The%20Forge/main"))()
 end)
 
+Button(Tab18, "DM通缉", function() 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shenmi9178/Dong-s-script/refs/heads/main/DM%E9%80%9A%E7%BC%89.lua"))()    
+end)
+Button(Tab19, "DM被遗弃", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shenmi9178/Dong-s-script/refs/heads/main/%E5%86%AC%E6%9F%90%E8%A2%AB%E9%81%97%E5%BC%83.lua"))()
+end)
 --============以下是设置那些的==============
 --============以下是设置那些的==============
 --============以下是设置那些的==============
